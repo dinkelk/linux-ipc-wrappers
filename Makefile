@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS=-O3 -pipe -Wall -Wextra -pedantic
 INCLUDE=-I.
 EXAMPLE_DIR=examples
-OBJ=Message.o Timer.o MessageQueueWrapper.o SemaphoreWrapper.o SerialWrapper.o SharedMemoryWrapper.o SocketWrapper.o $(EXAMPLE_DIR)/MessageQueueWrapperTest.o $(EXAMPLE_DIR)/SemaphoreWrapperTest.o $(EXAMPLE_DIR)/SerialWrapperTest.o $(EXAMPLE_DIR)/SharedMemoryWrapperTest.o $(EXAMPLE_DIR)/SocketWrapperTest.o
+OBJ=Message.o TimerWrapper.o MessageQueueWrapper.o SemaphoreWrapper.o SerialWrapper.o SharedMemoryWrapper.o SocketWrapper.o $(EXAMPLE_DIR)/MessageQueueWrapperTest.o $(EXAMPLE_DIR)/SemaphoreWrapperTest.o $(EXAMPLE_DIR)/SerialWrapperTest.o $(EXAMPLE_DIR)/SharedMemoryWrapperTest.o $(EXAMPLE_DIR)/SocketWrapperTest.o
 BIN=$(EXAMPLE_DIR)/messageQueueWrapperTest $(EXAMPLE_DIR)/semaphoreWrapperTest $(EXAMPLE_DIR)/serialWrapperTest $(EXAMPLE_DIR)/sharedMemoryWrapperTest $(EXAMPLE_DIR)/socketWrapperTest
 
 all: $(OBJ) $(BIN)
@@ -10,7 +10,7 @@ all: $(OBJ) $(BIN)
 Message.o: Message.c
 	$(CC) -o $@ $(CFLAGS) -c $^
 
-Timer.o: Timer.c
+TimerWrapper.o: TimerWrapper.c
 	$(CC) -o $@ $(CFLAGS) -c $^
 
 MessageQueueWrapper.o: MessageQueueWrapper.c
@@ -31,7 +31,7 @@ SerialWrapper.o: SerialWrapper.c
 $(EXAMPLE_DIR)/MessageQueueWrapperTest.o: $(EXAMPLE_DIR)/MessageQueueWrapperTest.c
 	$(CC) -o $@ $(CFLAGS) -c $(INCLUDE) $^
 
-$(EXAMPLE_DIR)/messageQueueWrapperTest: $(EXAMPLE_DIR)/messageQueueWrapperTest.o MessageQueueWrapper.o Timer.o Message.o
+$(EXAMPLE_DIR)/messageQueueWrapperTest: $(EXAMPLE_DIR)/messageQueueWrapperTest.o MessageQueueWrapper.o TimerWrapper.o Message.o
 	$(CC) -o $@ $(CFLAGS) $^ -lrt
 
 $(EXAMPLE_DIR)/SemaphoreWrapperTest.o: $(EXAMPLE_DIR)/SemaphoreWrapperTest.c
@@ -43,7 +43,7 @@ $(EXAMPLE_DIR)/semaphoreWrapperTest: $(EXAMPLE_DIR)/semaphoreWrapperTest.o Semap
 $(EXAMPLE_DIR)/SerialWrapperTest.o: $(EXAMPLE_DIR)/SerialWrapperTest.c
 	$(CC) -o $@ $(CFLAGS) -c $(INCLUDE) $^
 
-$(EXAMPLE_DIR)/serialWrapperTest: $(EXAMPLE_DIR)/SerialWrapperTest.o SerialWrapper.o Timer.o
+$(EXAMPLE_DIR)/serialWrapperTest: $(EXAMPLE_DIR)/SerialWrapperTest.o SerialWrapper.o TimerWrapper.o
 	$(CC) -o $@ $(CFLAGS) $^ -lrt
 
 $(EXAMPLE_DIR)/SharedMemoryWrapperTest.o: $(EXAMPLE_DIR)/SharedMemoryWrapperTest.c

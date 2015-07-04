@@ -1,4 +1,4 @@
-#include "Timer.h"
+#include "TimerWrapper.h"
 
 int timerCreate(timer* timerid)
 {

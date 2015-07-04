@@ -6,7 +6,7 @@
 #include "errno.h"
 #include <string.h>
 #include "Message.h"
-#include "Timer.h"
+#include "TimerWrapper.h"
 
 /*****************************************************************
  * Class: messageQueueWrapper

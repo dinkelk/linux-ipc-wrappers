@@ -21,7 +21,7 @@ int socketCreate()
 	/*
 	// Options:
 	// 1) Address Family: AF_INET (IPv4)
-	// 2) Type: SOCK_STREAO (TCP), SOCK_DGRAM (UDP)
+	// 2) Type: SOCK_STREAM (TCP), SOCK_DGRAM (UDP)
 	// 3) Protocol: IPPROTO_IP = 0 (IP Protocol)
 	*/
 

@@ -9,7 +9,7 @@
 #include <fcntl.h>
 #include <pthread.h>
 #include <termios.h>
-#include "Timer.h"
+#include "TimerWrapper.h"
 
 #define HALF_SECOND 500000
 
