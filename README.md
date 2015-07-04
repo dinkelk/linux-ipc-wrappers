@@ -3,12 +3,12 @@ A set of simple C libraries that simplify the use of Linux message queues, semap
 
 The wrappers provided include:
 
-* MessageQueueWrapper.c - a simple wrapper around System V message queues
-* SemaphoreWrapper.c - a simple wrapper around Linux semaphores
-* SerialWrapper.c - a simple wrapper which allows reading and writing from serial ports with all flow control turned off
-* SharedMemoryWrapper.c - a simple wrapper around Linux shared memory
-* SocketWrapper.c - a simple wrapper for performing IPv4 TCP socket operations
-* TimerWrapper.c - a simple wrapper around linux time operations, providing a one-shot timer, a periodic timer, and a stop watch like timer
+* **MessageQueueWrapper.c** - a simple wrapper around System V message queues
+* **SemaphoreWrapper.c** - a simple wrapper around Linux semaphores
+* **SerialWrapper.c** - a simple wrapper which allows reading and writing from serial ports with all flow control turned off
+* **SharedMemoryWrapper.c** - a simple wrapper around Linux shared memory
+* **SocketWrapper.c** - a simple wrapper for performing IPv4 TCP socket operations
+* **TimerWrapper.c** - a simple wrapper around linux time operations, providing a one-shot timer, a periodic timer, and a stop watch like timer
 
 
 ### Compilation
