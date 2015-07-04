@@ -11,10 +11,10 @@ The wrappers provided include:
 * **TimerWrapper.c** - a simple wrapper around linux time operations, providing a one-shot timer, a periodic timer, and a stop watch like timer
 
 
-### Compilation
-run: `make`
+##### Compilation:
+Just run `make`.
 
-### Examples
+##### Examples:
 Examples on how to use these libraries can be found in the `examples/` directory. Compiling the source will create 4 examples programs:
 
 * `messageQueueWrapperTest` - This example creates a System V message queue that connects two message queue ids. A message is sent between the two ids.
@@ -22,7 +22,7 @@ Examples on how to use these libraries can be found in the `examples/` directory
 * `socketWrapperTest` - This example sends an HTTP request to a server and returns the resultant HTML.
 * `serialWrapperTest` - This example requires the program `socat` which can be installed via `apt-get` or similiar. `socat` is used to connect a `/dev/pts/#` to `stdout` simulating a serial port connection. The example sends data through the simulated serial port and then receives data given by the user.
 
-### Contribution
+##### Contribution:
 These wrappers mostly serve as a reminder to me of how to use the various Linux IPC functions. If you find a bug, or want to improve what I have here, please submit a pull request.
 
 Enjoy!
