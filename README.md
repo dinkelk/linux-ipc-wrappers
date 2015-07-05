@@ -1,5 +1,5 @@
 # linux-ipc-wrappers
-A set of simple C libraries that simplify the use of Linux message queues, semaphores, shared memory, sockets, timers, and even serial ports.
+This is a set of simple C libraries that simplify the use of Linux message queues, semaphores, shared memory, sockets, timers, and even serial ports.
 
 The wrappers provided include:
 
